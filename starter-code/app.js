@@ -126,34 +126,42 @@ const sum = (num1, num2, num3, num4, ) => `${num1} + ${num2} + ${num3} + ${num4}
   //};
 //};
 
-const objectLit = array => ({
-  key1: array[0],
-  key2: array['value2'],
-  key3: array['value3']
+const objectLit = () => ({
+  key1: 'value1',
+  key2: 'value2',
+  key3: 'value3',
 });
 
 // TODO: Uncomment the following line of code to see the output in the browser console
  console.log(objectLit());
 
 
-let sumAndProduct = function(a, b) {
+// let sumAndProduct = function(a, b) {
+//   let sum = a + b;
+//   let product = a * b;
+//   return [sum, product];
+// };
+
+const sumAndProduct = (a, b) => {
   let sum = a + b;
   let product = a * b;
   return [sum, product];
 };
 
-const sumAndProduct 
-
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sumAndProduct(3, 9));
+console.log(sumAndProduct(3, 9));
 
 
-let message = function(name) {
-  return `Hello, ${name}!`;
+// let message = function(name) {
+//   return `Hello, ${name}!`;
+// };
+
+const message = (name) => {
+  return `Hello, ${name}!`
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(message('Allie'));
+console.log(message('Allie'));
 
 
 let Student = function(name, age, hometown) {
@@ -162,11 +170,19 @@ let Student = function(name, age, hometown) {
   this.hometown = hometown;
 };
 
+// let Student = (name, age, hometown) => {
+//   this.name = name;
+//   this.age = age;
+//   this.hometown = hometown;
+// };
+
 let joe = new Student('Joe Schmoe', 100, 'Anytown, USA');
+
+// 
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this code to break!
-// console.log(joe);
+ console.log(joe);
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
@@ -176,9 +192,11 @@ Student.prototype.greeting = function() {
   return `Hi, my name is ${this.name}`;
 };
 
+// git
+
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
-// console.log(joe.greeting());
+console.log(joe.greeting());
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
