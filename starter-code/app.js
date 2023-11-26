@@ -192,7 +192,10 @@ Student.prototype.greeting = function() {
   return `Hi, my name is ${this.name}`;
 };
 
-// git
+
+// Student.prototype.greeting = () => {
+//   return `Hi, my name is ${this.name}`;
+// };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
@@ -202,12 +205,16 @@ console.log(joe.greeting());
 
 
 
-Student.courseName = function() {
-  return 'This student is enrolled in Code 301.';
+// Student.courseName = function() {
+//   return 'This student is enrolled in Code 301.';
+// };
+
+Student.courseName = () => {
+  return 'This student is enrolled in Code 301';
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+console.log(Student.courseName());
 
 
 
@@ -218,17 +225,24 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scope();
+joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scopeArrow();
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+
+//"this" is Student, which was the value called earlier in the code, which identified joe as a newStudent. It keeps the properties of Student.
+
+
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+
+
+//"this" with joe.scopeArrow() calls the website that houses the starter code. 
+
+
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// A traditional method  means it is dynamically scoped and you use create a new object. With the Arrow function it inherits this 
